@@ -11,9 +11,11 @@ geckodriver_autoinstaller.install()  # Check if the current version of geckodriv
                                      # then add geckodriver to path
 # The request must be done by selenium webdriver because it contains JavaScript
 
+##################### Modify these lines #####################
 url = "https://www.ecosia.org/images?q=amanite%20tue-mouches"
 path = "../data/amanite-tue-mouches/"
 nb_images = 100
+###############################################################
 
 # Initialize the browser
 options = FirefoxOptions()
