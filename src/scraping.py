@@ -11,9 +11,12 @@ geckodriver_autoinstaller.install()  # Check if the current version of geckodriv
                                      # then add geckodriver to path
 # The request must be done by selenium webdriver because it contains JavaScript
 
+##################### Modify these lines #####################
 url = "https://www.ecosia.org/images?q=amanite%20tue-mouches"
-path = "../data/amanite-tue-mouches/"
+species_name = "amanite-tue-mouches"
+path = "../data/" + species_name + "/"
 nb_images = 100
+###############################################################
 
 # Initialize the browser
 options = FirefoxOptions()
@@ -48,5 +51,5 @@ def download_image(image_url, image_name):
 
 for i in range(nb_images):
     print("Downloaded : {}".format(i))
-    image_name = "amanite-tue-mouches-{}".format(i)
+    image_name = "{}-{}".format(species_name, i)
     download_image(image_urls[i], image_name)
